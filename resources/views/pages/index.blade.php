@@ -98,7 +98,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div>
+                    <div class="hidden sm:block">
                         <span>
                             Copyright &copy; {{ date('Y') }} TheECGaming
                         </span>
