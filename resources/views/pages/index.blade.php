@@ -80,9 +80,9 @@
                 </div>
             </div>
             <div class="absolute bottom-8 left-8 right-8 max-w-7xl mx-auto">
-                <div class="flex">
+                <div class="flex gap-2">
                     <div class="flex-1">
-                        <div class="px-9">
+                        <div class="sm:px-9">
                             <ul class="flex gap-4">
                                 <li>
                                     <a href="#!" class="link hover:text-base-content/80">About</a>
