@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="bg-gradient-to-b from-base-300 to-base-200">
-        <header class="sticky top-0" id="nav">
+        <header class="sticky top-0 z-40 bg-base-300" id="nav">
             <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
@@ -69,8 +69,8 @@
             {{--            </div>--}}
             {{--        </div>--}}
         </header>
-        <div class="relative isolate px-6 pt-14 lg:px-8" id="hero">
-            <div class="py-12 lg:py-56">
+        <div class="absolute min-h-screen top-0 flex justify-center w-full min-h-screen items-center" id="">
+            <div class="">
                 <div class="text-center">
                     <h1 class="flex flex-col gap-4 justify-center">
                     <span class="text-5xl lg:text-6xl xl:text-8xl font-semibold tracking-wide text-center">
@@ -80,33 +80,35 @@
                         <span class="text-5xl lg:text-8xl xl:text-9xl font-bold tracking-wide text-center">
                         TheECGaming
                     </span>
+                        <span class="text-4xl lg:text-6xl xl:text-7xl tracking-wide text-center">I Am A <span id="whatIAm"></span> <span class="noJs">Web Developer</span></span>
                     </h1>
                 </div>
             </div>
-            <div class="absolute bottom-8 left-8 right-8 max-w-7xl mx-auto">
-                <div class="flex gap-2">
-                    <div class="flex-1">
-                        <div class="sm:px-9">
-                            <ul class="flex gap-4">
-                                <li>
-                                    <a href="#!" class="link hover:text-base-content/80">About</a>
-                                </li>
-                                <li>|</li>
-                                <li>
-                                    <a href="#!" class="link hover:text-base-content/80">Contact</a>
-                                </li>
-                                <li>|</li>
-                                <li>
-                                    <a href="{{ route('links') }}" class="link hover:text-base-content/80">Links</a>
-                                </li>
-                            </ul>
-                        </div>
+
+        </div>
+        <div class="absolute bottom-8 left-8 right-8 max-w-7xl mx-auto">
+            <div class="flex gap-2">
+                <div class="flex-1">
+                    <div class="sm:px-9">
+                        <ul class="flex gap-4">
+                            <li>
+                                <a href="#!" class="link hover:text-base-content/80">About</a>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <a href="#!" class="link hover:text-base-content/80">Contact</a>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <a href="{{ route('links') }}" class="link hover:text-base-content/80">Links</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="hidden sm:block">
+                </div>
+                <div class="hidden sm:block">
                         <span>
                             Copyright &copy; {{ date('Y') }} TheECGaming
                         </span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -135,7 +137,13 @@ window.addEventListener('load', function() {
         window.onscroll = function() {stickyHeader()};
 
 
-        updateHeroSize();
+        // updateHeroSize();
+
+        let noJs = document.getElementsByClassName("noJs");
+
+        for (let i = 0; i < noJs.length; i++) {
+            noJs[i].style.display = "none";
+        }
 
 
     })
@@ -153,5 +161,22 @@ window.addEventListener('load', function() {
         hero.style.height = "calc(100vh - " + headerHeight + "px)";
     }
 </script>
+
+    <script>
+        let options = {
+            strings: ["Web Developer", "Web Designer", "Video Editor", "Content Creator"],
+            typeSpeed: 150,
+            smartBackspace: true,
+            backSpeed: 50,
+            backDelay: 1000,
+            loop: true,
+            onStart: (arrayPos, self) => {
+
+            },
+        }
+
+        let typed = new Typed("#whatIAm", options);
+
+    </script>
 
 @endsection
