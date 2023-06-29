@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <x-application-mark class="block h-9 w-auto rounded-full" />
                     </a>
                 </div>
 
@@ -97,6 +97,12 @@
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
                             </div>
+
+                            @if(auth()->user()->isAdmin())
+                                <x-dropdown-link href="{{ route('admin.dashboard') }}">
+                                    {{ __('Admin Dashboard') }}
+                                </x-dropdown-link>
+                            @endif
 
                             <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}

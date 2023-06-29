@@ -29,7 +29,11 @@
                     <a href="#" class="text-sm font-semibold leading-6 text-base-content">Contact</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm font-semibold leading-6 text-base-content">Client area <span aria-hidden="true">&rarr;</span></a>
+                    @auth
+                        <a href="{{ route('dashboard') }}" class="text-sm font-semibold leading-6 text-base-content">Client area <span aria-hidden="true">&rarr;</span></a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm font-semibold leading-6 text-base-content">Client area <span aria-hidden="true">&rarr;</span></a>
+                    @endauth
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
