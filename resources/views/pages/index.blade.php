@@ -69,7 +69,7 @@
             {{--            </div>--}}
             {{--        </div>--}}
         </header>
-        <div class="absolute min-h-screen top-0 flex justify-center w-full min-h-screen items-center" id="">
+        <div class="absolute min-h-screen top-0 flex justify-center w-full min-h-screen items-center bg-base-300" id="">
             <div class="">
                 <div class="text-center">
                     <h1 class="flex flex-col gap-4 justify-center">
