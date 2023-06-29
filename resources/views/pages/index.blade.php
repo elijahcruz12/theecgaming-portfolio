@@ -137,7 +137,6 @@ window.addEventListener('load', function() {
         window.onscroll = function() {stickyHeader()};
 
 
-        // updateHeroSize();
 
         let noJs = document.getElementsByClassName("noJs");
 
@@ -147,19 +146,6 @@ window.addEventListener('load', function() {
 
 
     })
-
-    //  On resize
-    window.addEventListener('resize', function() {
-        updateHeroSize();
-    })
-
-    function updateHeroSize(){
-        let hero = document.getElementById("hero");
-        let header = document.getElementById("nav");
-        let headerHeight = header.offsetHeight;
-
-        hero.style.height = "calc(100vh - " + headerHeight + "px)";
-    }
 </script>
 
     <script>
