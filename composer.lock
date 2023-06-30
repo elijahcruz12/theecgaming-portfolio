@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df791fb91734da62a2619b58658a05ca",
+    "content-hash": "f1fc8d685ae4daf075ebf9abaf8b20a3",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -6271,6 +6271,46 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "zhujinkui/hashlib",
+            "version": "V1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zhujinkui/hashlib.git",
+                "reference": "4cc6ab25c3a396c918f3c9be388c7f2a43315cab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zhujinkui/hashlib/zipball/4cc6ab25c3a396c918f3c9be388c7f2a43315cab",
+                "reference": "4cc6ab25c3a396c918f3c9be388c7f2a43315cab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "think\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "zhujinkui",
+                    "email": "developer@zhujinkui.com"
+                }
+            ],
+            "description": "Hashlib is small PHP library to generate YouTube-like ids from numbers. Use it when you don't want to expose your database ids to the user: http://hashids.org/php",
+            "support": {
+                "issues": "https://github.com/zhujinkui/hashlib/issues",
+                "source": "https://github.com/zhujinkui/hashlib/tree/V1.0"
+            },
+            "time": "2018-09-25T02:46:06+00:00"
         }
     ],
     "packages-dev": [

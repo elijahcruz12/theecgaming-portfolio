@@ -12,6 +12,35 @@
 
 namespace App\Models{
 /**
+ * App\Models\Link
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $url
+ * @property string $slug
+ * @property int $times_clicked
+ * @property int $is_active
+ * @property string|null $disabled_reason
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Link newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Link newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Link query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereDisabledReason($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereTimesClicked($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Link whereUrl($value)
+ */
+	class Link extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Portfolio
  *
  * @property int $id
@@ -62,6 +91,7 @@ namespace App\Models{
  * @property string|null $profile_photo_path
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string $role
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
@@ -79,12 +109,13 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereProfilePhotoPath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereRole($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorConfirmedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorRecoveryCodes($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
-	class User extends \Eloquent {}
+	class User extends \Eloquent implements \Illuminate\Contracts\Auth\MustVerifyEmail {}
 }
 
 namespace App\Models{

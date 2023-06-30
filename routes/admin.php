@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\Admin\MainPagesController::class, 'index'])->name('dashboard');
 
 Route::resource('portfolio', \App\Http\Controllers\Admin\PortfolioController::class);
+Route::resource('links', \App\Http\Controllers\Admin\LinkController::class);

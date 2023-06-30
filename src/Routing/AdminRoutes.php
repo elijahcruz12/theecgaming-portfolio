@@ -13,6 +13,7 @@ class AdminRoutes
         $this->routes = collect([
             Route::create('Dashboard', 'admin.dashboard', 'o-home', 'admin.dashboard'),
             Route::create('Portfolio', 'admin.portfolio.index', 'o-archive-box', 'admin.portfolio.*'),
+            Route::create('Links', 'admin.links.index', 'o-link', 'admin.links.*'),
         ]);
     }
 
