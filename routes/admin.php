@@ -17,3 +17,5 @@ Route::get('/', [\App\Http\Controllers\Admin\MainPagesController::class, 'index'
 
 Route::resource('portfolio', \App\Http\Controllers\Admin\PortfolioController::class);
 Route::resource('links', \App\Http\Controllers\Admin\LinkController::class);
+
+Route::resource('uploads', \App\Http\Controllers\UploadController::class)->except('store');

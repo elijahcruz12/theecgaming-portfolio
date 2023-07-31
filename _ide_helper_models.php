@@ -76,6 +76,39 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Upload
+ *
+ * @property int $id
+ * @property string $token
+ * @property string|null $file_path
+ * @property string $file_type
+ * @property bool $is_finished_uploading
+ * @property int $total_chunks
+ * @property mixed|null $chunks
+ * @property int $is_finished_processing
+ * @property mixed|null $metadata
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereChunks($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereFilePath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereFileType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereIsFinishedProcessing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereIsFinishedUploading($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereMetadata($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereTotalChunks($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Upload whereUpdatedAt($value)
+ */
+	class Upload extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id
